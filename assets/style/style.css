@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@font-face {
+    font-family: title;
+    src: url("https://static.wixstatic.com/ufonts/09374c_6bb11670e04148429125905b1c9cc00c/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/09374c_6bb11670e04148429125905b1c9cc00c/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/09374c_6bb11670e04148429125905b1c9cc00c/ttf/file.ttf") format("ttf");
+}
+
+/*ms1000*/
+@media screen and (max-width: 1000px) {
+   #content,
+   aside,
+   header{
+       min-width: 100%;
+       padding: 0;
+   }
+
+    #home{
+        padding-top: 30px !important;
+    }
+
+    .jumbotron{
+        min-height: 600px !important;
+        min-width: .5em !important;
+    }
+    .brand a img{
+        font-size: 13px !important;
+    }
+
+    /* sembunyikan semua menu item. 
+    Tampilkan juga list item yang berisi link 
+    untuk membuka menu yaitu (li.icon) */
+    ul.navbar li {
+        display: none;
+    }
+    ul.navbar li.icon {
+        float: left;
+        display: block !important;
+    }
+
+    /* membuat class responsive untuk menampilkan list menu*/
+    ul.navbar.responsive {
+        position: relative;
+    }
+    ul.navbar.responsive li.icon {
+        position: absolute;
+        top: 0;
+    }      
+    ul.navbar.responsive .home{
+        padding-top: 90px;
+        background-color: transparent !important;
+    }
+    ul.navbar.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.navbar.responsive li a {
+        display: block;
+        text-align: left;
+    }
+    .container{
+        padding: 10px 20px !important;
+    }
+
+    aside, #contact{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #contact{
+        margin-top: -48px;
+        margin-bottom: -100px;
+        padding-left: 60px;
+        max-width: 100% !important;
+    }
+    footer{
+        margin-top: 5px !important;
+        background-color: 1c1c1c !important;
+        font-size: 0.8em;
+        color: white;
+    }
+    .landing p {
+        width: 500px !important;
+    }
+}
+/*endms1000*/
+
+/*ms500*/
+@media screen and (max-width: 500px) {
+    /*intro*/
+    #intro {
+        padding-left: 8% !important;
+    }
+    .section.second {
+        padding-left: 8%!important;
+    }
+    .landing p {
+        width: 350px !important;
+    }
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+main{
+    overflow: auto;
+}
+
+.jumbotron{
+    background-image: url('../image/laptop.jpg');
+    color: aliceblue;
+    width: 100%;
+    min-height: 800px;
+    object-fit: cover;
+    object-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+#home{
+    margin: 0;
+    padding-top: 100px;
+    margin-left: 80px;
+    line-height: 1.7em;
+}
+
+nav{
+    overflow: hidden;
+    top: 0px;
+    position: sticky;
+    padding: 0;
+}
+
+nav a{
+    color: white;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+nav li {
+   float: left;
+   display: inline;
+   list-style-type: none;
+   padding-bottom: 18px;
+}
+
+nav a:hover{
+    background-color: seagreen;
+    color: black;
+}
+
+nav a.active{
+    background-color: seagreen;
+    color: white;
+}
+
+.brand{
+    float: right;
+    font-style: bold;
+    text-shadow: 4px 4px 4px white;
+    padding-right: 20px;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.navbar li.icon {
+    display: none;
+}
+
+.container{
+    padding-top: 50px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 20px 20px 20px;
+    margin-top: 50px;
+    background-color: #faf9f5;
+}
+
+#contact ul li{
+    font-style: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+#contact{
+    max-width: 50%;
+    float: left;
+    height: 350px;
+    margin-left: 300px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#contact ul{
+    font-size: 16px;
+    color: black;
+}
+
+#contact h3{
+    text-align: center;
+    margin-bottom: 0px;
+}
+#contact hr{
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+aside{
+    float: right;
+    max-width: 50%;
+    min-height: 500px;
+    margin-right: 25%;
+    margin-left: auto;
+}
+
+.profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 0 8px #e6e1e1, 0 0 12px #1c1b1b;
+}
+
+.profile a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.profile{
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    max-width: 400px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+/* skills */
+.skills {
+    background-color: skyblue;
+}
+.section.second {
+    padding-left: 20%;
+    padding-top: 5%; 
+    padding-bottom: 5%;
+}
+.section .container {
+    position: relative; 
+}
+.section .container:after {
+    position: absolute;
+    left: 20px; 
+}
+.section .container h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.skills .skill-list {
+    margin-left: 0px; 
+}
+
+.skills .skill-list li:first-child {
+    font-size: 0.9375em;
+    color: #8c8c8c; 
+}
+
+.list-flat {
+    margin-left: 0;
+    list-style: none;
+}
+/*work*/
+.work {
+    background-color: #C1F4C5;
+}
+.work .work-list {
+    margin-left: 0px; 
+}
+.work .work-list li {
+    list-style: none;
+    font-size: 0.9375em;
+    color: #8c8c8c; 
+}
+.work .work-list li a {
+    padding-bottom: 5px;
+    font-size: 1.1875em;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #b3b3b3; 
+}
+.work .work-list li a:hover {
+    border-bottom: 1px solid #333333; 
+}
+
+a, p, li {
+    font-family: "Lato", Arial, sans-serif;
+    color: #4e4e4e;
+    font-size: 1em;
+    line-height: 1.75em; 
+}
+
+/* social media */
+.socialmedia{
+    padding-top: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border: 5px auto;
+    padding-left: 0;
+}
+
+.socialmedia img{
+    max-width: 50px;
+    max-height: 50px;
+    padding: 5px;
+    margin: 15px;
+    display: inline-block; 
+    border-radius: 50%;
+    margin-bottom: 13px;
+    z-index: 0;
+    box-shadow: 3px 2px 4px black;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+.socialmedia img:hover{
+    animation: rotate 2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+/*landing*/
+#landing-effect{
+    z-index: 1;
+    font-family: title;
+    font-weight: bolder;
+}
+
+.slogan{ 
+    font-family:'Covered By Your Grace', cursive;
+}
+
+.landing h1{ 
+    font-size: 30px; padding:20px;
+}
+
+.landing h2{ 
+    position: fix; 
+    font-size: 35px; 
+    padding:20 auto; 
+    font-family: 'Codystar', cursive;
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+.landing h3{ 
+    font-size: 35px; 
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 4px;
+    font-weight: 800;
+    padding: 0px 20px;
+    color: #b1f1fce3;
+    text-transform: uppercase;
+    border-radius: 2em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.landing p {
+    display: inline-block;
+    padding: 10px;
+    width: 800px;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+/*intro*/
+#intro {
+    background-color: #BFFFF0;
+    padding-left: 20%;
+    padding-top: 5%; 
+    padding-bottom: 5%;
+}
+
+.jumbotron .logo{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 0 8px #e6e1e1, 0 0 12px #1c1b1b;
+}
